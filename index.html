@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 指南与提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f3f5f7;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.65;
+            padding: 0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1f3a5a 70%, #2c4c6e 100%);
+            color: #eaf0f9;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 215, 150, 0.03);
+            border-radius: 50%;
+            top: -80px;
+            right: -60px;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+        }
+
+        .hero .sub {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 620px;
+            margin: 0.75rem auto 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1.2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem;
+            background: #ffffff;
+            box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+            border-radius: 0 0 12px 12px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-left: 6px solid #d54c2b;
+            padding-left: 1rem;
+            margin: 2.8rem 0 1.2rem;
+            color: #1f2d3f;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .card-note {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 1.6rem 2rem;
+            margin: 1.8rem 0;
+            border-left: 4px solid #d54c2b;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+        }
+
+        .highlight-box {
+            background: #fef7f2;
+            padding: 1.2rem 1.8rem;
+            border-radius: 12px;
+            margin: 1.8rem 0;
+            border: 1px solid #f2ded4;
+        }
+
+        a {
+            color: #c44221;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #942f13;
+            border-bottom-color: #c87b62;
+        }
+
+        .faq-item {
+            margin: 1rem 0;
+            padding: 0.6rem 0 0.6rem 1.2rem;
+            border-left: 3px solid #d9dde2;
+        }
+
+        .faq-item strong {
+            display: block;
+            color: #1f2f41;
+            margin-bottom: 0.2rem;
+        }
+
+        .footer-note {
+            border-top: 1px solid #dde1e7;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: #54687a;
+            font-size: 0.95rem;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #c44221;
+            color: #c44221;
+            padding: 0.55rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 500;
+            margin-top: 0.8rem;
+            transition: 0.2s;
+            text-decoration: none;
+            border-bottom: 2px solid #c44221;
+        }
+
+        .btn-ghost:hover {
+            background: #c44221;
+            color: white;
+            border-color: #c44221;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 0.4rem 0 0.4rem 1.4rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #d54c2b;
+            font-weight: bold;
+        }
+
+        @media (max-width: 680px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 1.8rem 1rem 3.5rem;
+            }
+            .card-note {
+                padding: 1.2rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>爱游戏</h1>
+        <p class="sub">简明指南 · 平台认知 · 访问提醒</p>
+    </header>
+
+    <main class="container">
+
+        <!-- 简介 -->
+        <div class="card-note">
+            <p style="font-size: 1.05rem; margin-bottom: 0.4rem;"><strong>关于这个页面</strong></p>
+            <p>这里整理了一份针对 <a href="https://portal-zh-i-game.com.cn">爱游戏</a> 的实用说明，内容涵盖基础背景、功能特点以及访问时需要注意的若干事项。无论你是初次了解还是希望快速确认某些细节，这份指南都能提供清晰、平实的参考。</p>
+        </div>
+
+        <h2 class="section-title">背景 · 定位</h2>
+        <p><strong>爱游戏</strong> 是一个面向中文用户的信息与互动平台，围绕游戏内容、社区讨论以及相关资讯展开服务。平台的设计初衷是提供一个相对集中的入口，让用户能够更高效地接触感兴趣的内容，同时保持界面的清晰与易用性。与许多同类站点相比，它更强调信息组织的条理性，减少无关干扰。</p>
+
+        <p>在体验过程中，你会发现平台对内容分类做了细致规划，从热门作品到小众话题都有所覆盖。对于希望快速找到特定游戏讨论或活动公告的用户来说，这种结构能节省不少筛选时间。</p>
+
+        <h2 class="section-title">主要特点与场景</h2>
+        <ul>
+            <li><strong>内容聚合</strong> —— 汇集游戏资讯、评测、社区动态，避免在多个站点之间反复跳转。</li>
+            <li><strong>分类导航</strong> —— 按照游戏类型、更新时间、热门程度等维度排列，方便按需浏览。</li>
+            <li><strong>社区互动</strong> —— 提供评论、点赞、收藏等基础功能，用户可围绕特定内容展开交流。</li>
+            <li><strong>操作轻量</strong> —— 页面加载速度较快，核心功能入口直观，适合日常快速查阅。</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p style="margin-bottom: 0.5rem;"><strong>适用场景举例</strong></p>
+            <p>想了解某款新游戏的评价？习惯在浏览游戏资讯时顺便看看其他玩家的看法？或者只想找一个信息相对干净、没有过度推销的页面？在这些情境下，<a href="https://portal-zh-i-game.com.cn">爱游戏</a> 都能提供一个不错的起点。</p>
+        </div>
+
+        <h2 class="section-title">访问提醒</h2>
+        <p>使用任何平台前，了解基本的注意事项都能让体验更顺畅。这里列出几条与 <strong>爱游戏</strong> 相关的实用提醒：</p>
+
+        <div class="faq-item">
+            <strong>① 网络与设备</strong>
+            <p>建议在稳定的网络环境下访问，部分内容（如视频、图片集）可能需要一定带宽。移动端与桌面端均可正常浏览，布局会自适应屏幕尺寸。</p>
+        </div>
+        <div class="faq-item">
+            <strong>② 账户与隐私</strong>
+            <p>平台的部分功能（如评论、收藏）需要登录账户。请保管好个人凭证，不要在公共设备上勾选“记住密码”。官方不会通过站内信索要密码或敏感信息。</p>
+        </div>
+        <div class="faq-item">
+            <strong>③ 内容甄别</strong>
+            <p>虽然平台会进行基础审核，但用户生成内容仍可能存在主观倾向。建议结合多个信源判断游戏品质，尤其是涉及消费决策时。</p>
+        </div>
+        <div class="faq-item">
+            <strong>④ 链接与跳转</strong>
+            <p>站内部分链接会导向外部站点（如开发者官网、视频平台）。跳转前留意地址栏，避免误入仿冒页面。认准主域名 portal-zh-i-game.com.cn 即可。</p>
+        </div>
+
+        <div style="background: #f2f6fa; border-radius: 12px; padding: 1.5rem 1.8rem; margin: 2rem 0;">
+            <p style="font-weight: 500; margin-bottom: 0.6rem;">📌 一句话总结</p>
+            <p style="margin-bottom: 0;"><a href="https://portal-zh-i-game.com.cn">爱游戏</a> 是一个以内容为中心、结构清晰的中文游戏相关平台。保持基本的网络安全意识，合理利用分类与社区功能，就能获得比较舒适的浏览体验。</p>
+        </div>
+
+        <div class="footer-note">
+            <p>本页为独立整理的指南性介绍，所有描述基于公开信息与平台实际功能。</p>
+            <p style="margin-top: 0.8rem;">建议将 <a href="https://portal-zh-i-game.com.cn" style="border-bottom: 1px solid #c87b62; padding-bottom: 1px;">爱游戏</a> 加入书签，方便日后快速回访。</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
