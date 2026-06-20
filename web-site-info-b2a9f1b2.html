@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品说明 · 九游 — 再访与持续关注</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f4f8fc;
+            color: #1a2b3c;
+            line-height: 1.6;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* hero subdue */
+        .hero-tag {
+            display: inline-block;
+            background: rgba(24, 144, 136, 0.08);
+            color: #0e7a6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            padding: 0.2rem 0.8rem;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #0b2b35;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.4rem;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #3d5a6b;
+            margin-bottom: 2.5rem;
+            border-left: 3px solid #1fa89a;
+            padding-left: 1rem;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.5rem 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 40, 50, 0.04), 0 1px 3px rgba(0, 30, 40, 0.06);
+            transition: box-shadow 0.2s, transform 0.15s;
+            border: 1px solid #e1ecf0;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 24px -8px rgba(20, 120, 130, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+            color: #1fa89a;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #0b2b35;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2a4455;
+        }
+
+        .accent-line {
+            height: 3px;
+            width: 32px;
+            background: #1fa89a;
+            margin: 0.4rem 0 0.6rem 0;
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 2.2rem 0 1rem 0;
+            color: #0b2b35;
+        }
+
+        .insight-block {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.5rem 1.8rem;
+            border: 1px solid #d9e7ed;
+            box-shadow: 0 2px 8px rgba(0, 40, 50, 0.03);
+            margin-bottom: 1.8rem;
+        }
+
+        .insight-block p {
+            margin-bottom: 0.8rem;
+        }
+
+        .insight-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.5rem;
+            background: #eaf3f6;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .faq-item {
+            break-inside: avoid;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #0b2b35;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #2f5365;
+        }
+
+        .cta-note {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            background: #ffffff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 40px;
+            border: 1px solid #cfe2e9;
+            box-shadow: 0 2px 6px rgba(0, 40, 50, 0.04);
+            margin-top: 1.2rem;
+        }
+
+        .cta-note span {
+            font-size: 0.95rem;
+            color: #1f4152;
+        }
+
+        .cta-note a {
+            color: #127a6e;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(26, 168, 148, 0.3);
+            transition: border-color 0.2s;
+        }
+
+        .cta-note a:hover {
+            border-bottom-color: #1fa89a;
+        }
+
+        .footnote {
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #597987;
+            border-top: 1px solid #d0e0e6;
+            padding-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.5rem;
+        }
+
+        .footnote span {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem 2rem;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .faq-mini {
+                grid-template-columns: 1fr;
+                padding: 1.2rem;
+            }
+
+            .cta-note {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+                padding: 1rem 1.2rem;
+            }
+
+            .insight-block {
+                padding: 1.2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-tag {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 轻度 hero -->
+    <div class="hero-tag">再次访问 · 收藏 · 持续关注</div>
+    <h1>九游：轻量产品说明</h1>
+    <div class="subhead">一份面向回访用户与潜在关注者的概要，聚焦使用场景、功能亮点与平台特征。</div>
+
+    <!-- 网格卡片：摘要+亮点+场景 -->
+    <div class="grid-cards">
+        <div class="card">
+            <div class="card-icon">📌</div>
+            <h3>摘要</h3>
+            <div class="accent-line"></div>
+            <p><a href="https://web-site-9games.com" style="color: #127a6e; text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">九游</a> 聚合游戏资讯、社区互动与工具资源，面向对内容品质有要求的玩家群体。平台持续迭代，保持信息密度与浏览效率的平衡。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">✦</div>
+            <h3>亮点特征</h3>
+            <div class="accent-line"></div>
+            <p>去中心化内容流 · 专栏/评测/数据 · 收藏夹同步 · 跨端适配。不依赖夸张推送，侧重用户自主发现与深度浏览。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>使用建议</h3>
+            <div class="accent-line"></div>
+            <p>建议将 <strong>九游</strong> 加入浏览器书签或主屏幕，便于周期性回访。利用收藏功能构建个人阅读队列，每周固定时段获取最新动态。</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔄</div>
+            <h3>场景举例</h3>
+            <div class="accent-line"></div>
+            <p>快速查阅新游评测、对比游戏版本变动、参与特定社区讨论。适合已对平台有基础认知，希望获得持续价值的回访者。</p>
+        </div>
+    </div>
+
+    <!-- 较丰富的使用说明 + 可信但克制的访问提示 -->
+    <div class="insight-block">
+        <p style="font-weight: 500; color: #0b2b35;">从再次访问到持续关注</p>
+        <p>对于已经接触过 <a href="https://web-site-9games.com" style="color: #127a6e; text-decoration: underline; text-underline-offset: 3px;">九游</a> 的用户，留存价值往往来自内容的连续性与工具属性。平台不鼓励高频打扰式互动，而是通过栏目分类、标签体系与时间线排序，让每次访问都能直接触达感兴趣的信息层。</p>
+        <p>收藏与关注机制经过简化：无需注册即可浏览大部分内容，注册后支持跨设备同步收藏夹与阅读历史。这种设计降低了回访门槛，同时保持信息管理的可迁移性。</p>
+        <p style="margin-top: 0.6rem;">建议新关注者先浏览“热门专题”与“近期更新”两个入口，快速建立对平台内容节奏的感知。长期使用者可自定义订阅关键词，进一步过滤信息流。</p>
+    </div>
+
+    <!-- FAQ 摘要 （克制但信息密度高）-->
+    <div class="section-title">常见理解 · FAQ 摘要</div>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">是否需要付费？</div>
+            <div class="faq-a">基础浏览、收藏、社区互动均免费。部分高级数据导出或去广告功能可能在未来以可选方式提供，目前无强制付费点。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">内容更新频率？</div>
+            <div class="faq-a">每日更新，但不过度推送。工作日更新密度略高于周末，重要游戏节点（版本更新/展会）会集中产出专题。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">如何保持访问便利？</div>
+            <div class="faq-a">推荐使用浏览器书签或移动端主屏幕快捷方式。平台无原生应用，但响应式布局在手机和平板均可完整浏览。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">隐私与数据说明</div>
+            <div class="faq-a">不追踪个人浏览行为用于广告投放。使用基础分析以优化内容结构。详情可参阅平台底部的简要说明。</div>
+        </div>
+    </div>
+
+    <!-- 核心链接嵌入句子：自然，不带诱导词 -->
+    <div class="cta-note">
+        <span>如果你已熟悉 <a href="https://web-site-9games.com">九游</a>，不妨将其纳入日常信息检索引擎。</span>
+        <span style="font-size: 0.9rem; color: #3d6b77;">—— 适用于回访者与长期关注者</span>
+    </div>
+
+    <!-- 底部补充：克制且真实的访问说明 -->
+    <div class="footnote">
+        <span>© 页面为产品说明示例 · 非官方版本</span>
+        <span>平台保持独立运营 · 内容来源及版权归属各创作者</span>
+        <span>建议通过标准浏览器访问以获得完整体验</span>
+    </div>
+</div>
+</body>
+</html>
