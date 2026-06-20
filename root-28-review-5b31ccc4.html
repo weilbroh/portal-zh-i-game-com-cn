@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 加拿大28</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf7;
+            color: #2c2c2c;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* —— hero 开场 —— */
+        .hero {
+            margin-bottom: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #4a4a48;
+            max-width: 580px;
+        }
+
+        .hero .short-intro {
+            font-size: 1.9rem;
+            font-weight: 350;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            color: #1b1b1a;
+            letter-spacing: -0.01em;
+        }
+
+        /* —— 正文 —— */
+        h1, h2, h3 {
+            font-weight: 450;
+            letter-spacing: 0.01em;
+            color: #1f1f1e;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 2.2rem 0 0.8rem 0;
+            padding-top: 0.2rem;
+            border-top: 1px solid #e3e2dd;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 2.2rem 0 0.6rem 0;
+        }
+
+        p {
+            margin: 0 0 1.3rem 0;
+            color: #3b3b39;
+        }
+
+        a {
+            color: #2b5f4c;
+            text-decoration: none;
+            border-bottom: 1px solid #cdd9d1;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #2b5f4c;
+            color: #1f4738;
+        }
+
+        /* —— 特点列表（温和卡片） —— */
+        .feature-list {
+            list-style: none;
+            margin: 1.8rem 0 2.2rem 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            background: #ffffff;
+            border: 1px solid #eae8e2;
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            font-size: 0.98rem;
+            transition: box-shadow 0.15s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .feature-list li strong {
+            display: inline-block;
+            font-weight: 520;
+            color: #1f3a30;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-list li span {
+            display: block;
+            margin-top: 0.2rem;
+            color: #4d4d4a;
+        }
+
+        /* —— 提示块 —— */
+        .note-box {
+            background: #f3f2ed;
+            border-left: 4px solid #bccbc1;
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0 1.8rem 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.95rem;
+            color: #3b3b38;
+        }
+
+        .note-box strong {
+            font-weight: 520;
+            color: #2b4f3f;
+        }
+
+        /* —— faq 摘要（极简） —— */
+        .faq-summary {
+            margin: 2.5rem 0 2rem 0;
+            border-top: 1px solid #e2e0da;
+            padding-top: 1.8rem;
+        }
+
+        .faq-summary details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #efede7;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-summary summary {
+            font-weight: 460;
+            cursor: pointer;
+            color: #2f3f36;
+            padding: 0.3rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .faq-summary summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-summary summary::before {
+            content: "↪";
+            font-size: 0.9rem;
+            color: #81877e;
+            transition: transform 0.2s;
+        }
+
+        .faq-summary details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-summary .answer {
+            padding: 0.5rem 0 0.6rem 1.4rem;
+            color: #4b4b47;
+            font-size: 0.93rem;
+        }
+
+        /* —— 结尾 —— */
+        .gentle-end {
+            margin: 3rem 0 1rem 0;
+            padding: 1.5rem 0 0.5rem 0;
+            border-top: 1px solid #dedcd5;
+            font-size: 0.95rem;
+            color: #4f4f4b;
+        }
+
+        .gentle-end a {
+            font-weight: 460;
+        }
+
+        /* —— 响应式 —— */
+        @media (max-width: 540px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            .hero .short-intro {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.35rem;
+            }
+
+            .feature-list li {
+                padding: 1rem 1.2rem;
+            }
+
+            .note-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero .short-intro {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 开场短句 -->
+    <div class="hero">
+        <div class="short-intro">偶尔停下来，<br>看一看数字背后的节奏。</div>
+        <p>一份关于 <strong>加拿大28</strong> 的简明指南，不渲染神秘，不堆砌术语，只把最常被问到的事，说清楚。</p>
+    </div>
+
+    <!-- 承接段落 -->
+    <h1>为什么需要这份指南</h1>
+    <p>接触一个自己不熟悉的数字游戏，最先涌上来的往往是疑问：它怎么运转？什么可以信，什么不必当真？</p>
+    <p>这个页面就是试着回答这些。不替你做决定，只提供一些经过筛选的基础信息——当你需要参考的时候，不至于在信息碎片里迷失方向。</p>
+
+    <!-- 特点列表 -->
+    <h2>你可以从这里获得什么</h2>
+    <ul class="feature-list">
+        <li>
+            <strong>基础规则</strong>
+            <span>数字范围、开奖逻辑、常见玩法 —— 用最直白的方式讲清框架，不掺水分。</span>
+        </li>
+        <li>
+            <strong>观察角度</strong>
+            <span>不是“预测”，而是“怎么看”：数据分布、频率、冷热，这些概念可以帮你保持清醒。</span>
+        </li>
+        <li>
+            <strong>常见误区</strong>
+            <span>哪些说法听起来有道理但其实经不起推敲，这里会简单点出来。</span>
+        </li>
+        <li>
+            <strong>访问提醒</strong>
+            <span>怎么找到可靠的信息源、如何判断一个网站是否值得停留，以及最重要的——保持自己的节奏。</span>
+        </li>
+    </ul>
+
+    <!-- 提示区：访问提醒 -->
+    <div class="note-box">
+        <strong>访问提醒：</strong> 如果你打算进一步了解或参与相关社区，请一定先确认信息来源。一个合适的起点是 <a href="https://root-28.com">加拿大28</a>，那里有比较完整的框架说明和讨论氛围，适合慢慢翻阅。
+    </div>
+
+    <!-- 场景 + 补充 -->
+    <h2>什么时候需要看这个页面</h2>
+    <p>也许是刚开始接触，还不知道从哪里入手；也许已经玩了一段时间，想退一步重新整理自己的认知。这两种状态都适合。</p>
+    <p>不催你，不推销，只是把一些值得留意的事情放在这里。你随时可以来，也随时可以走。</p>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h3 style="font-size:1.1rem; margin-bottom:0.4rem; border:none; padding:0;">一些常见疑问</h3>
+
+        <details>
+            <summary>加拿大28 的“28”是指什么？</summary>
+            <div class="answer">通常指从 0 到 28 的 29 个数字区间，每一期开出其中一个数字。不同平台的具体规则可能略有差别，但范围基本一致。</div>
+        </details>
+
+        <details>
+            <summary>有办法稳定提高胜率吗？</summary>
+            <div class="answer">没有任何方法能保证长期稳定“获胜”。数字游戏天然带有随机性，任何宣称拥有稳赢策略的说法都应该保持怀疑。</div>
+        </details>
+
+        <details>
+            <summary>在哪里可以看到历史开奖数据？</summary>
+            <div class="answer">正规的社区通常会提供历史数据查询功能。你可以通过 <a href="https://root-28.com">加拿大28</a> 找到相关模块，数据本身是公开的，但解读方式因人而异。</div>
+        </details>
+
+        <details>
+            <summary>这个页面会经常更新吗？</summary>
+            <div class="answer">内容会基于常见疑问做阶段性整理，但不会追逐短期热点。保持简洁、准确，比频繁更新更重要。</div>
+        </details>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-end">
+        <p>数字只是数字，节奏始终在你手中。希望这份指南能成为你偶尔回头时的一盏小灯。</p>
+        <p>如果你觉得有用，欢迎把它分享给同样在了解 <a href="https://root-28.com">加拿大28</a> 的朋友。慢慢来，比较快。</p>
+    </div>
+
+</div>
+</body>
+</html>
